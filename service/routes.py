@@ -130,7 +130,7 @@ def list_products():
 ######################################################################
 
 
-@app("/products/<int:product_id>", methods=["GET"])
+@app.route("/products/<int:product_id>", methods=["GET"])
 def get_product(product_id):
     """ retrieve a single product"""
     app.logger.info("Request to retrieve a product with ID: [%s]", product_id)

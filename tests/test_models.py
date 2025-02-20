@@ -140,7 +140,7 @@ class TestProductModel(unittest.TestCase):
         """Should delete a product"""
         product = ProductFactory()
         product.create()
-        self.assertIsEqual(len(Product.all()), 1)
+        self.assertEqual(len(Product.all()), 1)
         product.delete()
         self.assertEqual(len(Product.all()), 0)
 
